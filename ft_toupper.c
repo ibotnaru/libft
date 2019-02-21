@@ -3,24 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibotnaru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 15:14:53 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/14 15:30:55 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 22:54:11 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 22:55:47 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-//#include <stdio.h>
-int ft_toupper(int c){
-	if( c >= 97  && c <= 122)
-		return c -= 32;
-	else 
-		return c;
-}
-/*int main(void)
+int		ft_toupper(int c)
 {
-	int ch = 'A';
-	printf("%d", ft_toupper(ch));
-	return 0;
-}*/
+	if (c >= 'a' && c <= 'z')
+		return (c -= 32);
+	else
+		return (c);
+}

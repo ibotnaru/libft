@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 00:04:27 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 00:20:00 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strdup(const char *s1)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int		len;
 	int		i;
-	char	*dest;
 
-	len = 0;
 	i = 0;
-	while (s1[len] != '\0')
-	{
-		len++;
-	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

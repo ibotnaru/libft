@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 18:45:11 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 12:13:55 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		len;
-	int		i;
-	char	*dest;
+	char	*buf;
 
-	len = 0;
-	i = 0;
-	while (s1[len] != '\0')
+	buf = malloc(sizeof(char) * len);
+	if (buf != NULL)
 	{
-		len++;
+		ft_memcpy(buf, src, len);
+		ft_memcpy(dst, buf, len);
+		free(buf);
 	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (dst);
 }

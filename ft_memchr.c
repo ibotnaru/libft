@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 19:00:09 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 12:45:09 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strdup(const char *s1)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		len;
-	int		i;
-	char	*dest;
+	size_t			i;
+	unsigned char	*src;
 
-	len = 0;
 	i = 0;
-	while (s1[len] != '\0')
+	src = (unsigned char *)s;
+	while (i < n)
 	{
-		len++;
-	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
+		if (src[i] == (unsigned char)c)
+		{
+			return (src + i);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (NULL);
 }

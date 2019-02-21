@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcpy.c                                           :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibotnaru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 10:37:04 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/15 11:06:40 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 20:48:05 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 20:50:09 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dst[i] = '\0';
+	return (dst);
 }
-/*int main(void)
-{
-	char arr1[] = "hello!!";
-	char arr2[] = "holahoa";
-	char *result =  ft_strcpy(arr1, arr2);
-	printf("%s", result);
-	return 0;
-}*/

@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 17:00:29 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 12:57:00 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strdup(const char *s1)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int		len;
-	int		i;
-	char	*dest;
+	int		ch;
+	size_t	i;
 
-	len = 0;
+	ch = (unsigned char)c;
 	i = 0;
-	while (s1[len] != '\0')
+	while (i < len)
 	{
-		len++;
-	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
+		((unsigned char *)b)[i] = ch;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (b);
 }

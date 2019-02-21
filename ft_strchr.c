@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 21:26:18 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 12:15:38 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strdup(const char *s1)
+char	*ft_strchr(const char *s, int c)
 {
-	int		len;
+	char	ch;
 	int		i;
-	char	*dest;
 
-	len = 0;
+	ch = (char)c;
 	i = 0;
-	while (s1[len] != '\0')
+	while (s[i])
 	{
-		len++;
-	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
+		if (s[i] == ch)
+			return ((char *)s + i);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (ch == '\0')
+		return ((char *)s + i);
+	return (NULL);
 }

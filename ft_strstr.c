@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 20:26:57 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:48:09 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 22:03:58 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 23:42:38 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int		len;
 	int		i;
-	char	*dest;
+	int		c;
+	int		l;
 
-	len = 0;
+	l = ft_strlen(needle);
+	if (l == 0)
+		return ((char *)haystack);
 	i = 0;
-	while (s1[len] != '\0')
+	c = 0;
+	while (haystack[i])
 	{
-		len++;
-	}
-	dest = malloc(sizeof(*dest) * (len + 1));
-	if (dest == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
+		if (c < l && haystack[i] == needle[c])
+		{
+			c++;
+			if (c == l)
+				return ((char *)(haystack + i - c + 1));
+		}
+		else
+		{
+			i -= c;
+			c = 0;
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (NULL);
 }

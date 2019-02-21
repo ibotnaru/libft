@@ -3,23 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibotnaru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 15:25:10 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/15 11:11:56 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 22:59:08 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 23:05:03 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int ft_isprint(int c){
-	if((c >= 65 && c <= 90) || c == ' ' )
-		return 1;
-	else 
-		return 0;
-}
-/*int main(void)
+int		ft_isprint(int c)
 {
-	int num = 122;
-	printf("%d", ft_isprint(num));
-}*/
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
+}

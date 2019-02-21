@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 21:37:08 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:07:46 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 20:50:36 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 22:27:14 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int i;
-	int sign;
-	int number;
+#include <string.h>
 
-	sign = 1;
+char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	size_t		i;
+
 	i = 0;
-	number = 0;
-	while (*(str + i) == ' ' || *(str + i) == '\t' || *(str + i) == '\n' ||
-		*(str + i) == '\v' || *(str + i) == '\r' || *(str + i) == '\f')
-		i++;
-	if (*(str + i) == '+')
-		i++;
-	else if (*(str + i) == '-')
+	while (src[i] && (i < len))
 	{
-		sign = -1;
+		dst[i] = src[i];
 		i++;
 	}
-	while (*(str + i) >= '0' && *(str + i) <= '9')
+	while (i < len)
 	{
-		number = 10 * number + *(str + i) - '0';
+		dst[i] = '\0';
 		i++;
 	}
-	return (number * sign);
+	return (dst);
 }

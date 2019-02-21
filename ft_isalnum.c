@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibotnaru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 15:39:29 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/13 15:57:42 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/20 23:11:14 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/20 23:21:37 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-int ft_isalnum( int c )
+int		ft_isalnum(int c)
 {
-	if((c >= 40 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && <= 122))
-		return c;
-	else 
-		return 0;
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+		(c >= '0' && c <= '9'))
+		return (1);
+	else
+		return (0);
 }
