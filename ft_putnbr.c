@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 15:25:34 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 15:58:56 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_putnbr(int n)
 {
-	ft_putendl_fd(s, 1);
+	if (n == "-2147483648")
+	{
+		ft_putstr("-2147483648");
+		return ;
+	}
+	if (n < 0)
+	{
+		n = n * -1;
+		ft_puchar('-');
+	}
+	if (n < 10)
+	{
+		ft_puchar(n + '0');
+		return ;
+	}
+	ft_putnbr(n / 10);
+	ft_putchar((n % 10) + '0');
+	return ;
 }

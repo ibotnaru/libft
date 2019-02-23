@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 16:49:04 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 21:57:43 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	ft_putendl_fd(s, 1);
+	size_t			i;
+	size_t			j;
+	unsigned char	*dest;
+
+	i = start;
+	j = 0;
+	dest = ft_strnew(len);
+	while (i < len + start)
+	{
+		dest[j] = s[i];
+		i++;
+		j++;
+	}
+	return (dest);
 }

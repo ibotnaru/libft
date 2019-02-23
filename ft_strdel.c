@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 17:32:54 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 18:03:27 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-void	ft_putendl(char const *s)
+void	ft_strdel(char **as)
 {
-	ft_putendl_fd(s, 1);
+	if (as != NULL && *as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

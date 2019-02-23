@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibotnaru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 10:55:07 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/16 11:08:33 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 14:46:00 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 15:16:43 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 17:21:59 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 17:27:54 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+char	*ft_strnew(size_t size)
 {
-	ft_putendl_fd(s, 1);
+	size_t	i;
+	char	*mem;
+
+	i = 0;
+	mem = malloc(sizeof(char) * (size + 1));
+	if (mem != NULL)
+		ft_memset(mem, 0, size);
+	return ((void *)mem);
 }

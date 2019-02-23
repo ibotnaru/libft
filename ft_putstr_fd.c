@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 15:17:14 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 16:05:55 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	ft_putendl_fd(s, 1);
+	write(fd, s, ft_strlen(s));
 }

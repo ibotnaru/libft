@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/21 16:43:08 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/21 22:04:57 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+char	*ft_strtrim(char const *s)
 {
-	ft_putendl_fd(s, 1);
+	int		i;
+	int		len;
+	int		j;
+
+	i = 0;
+	len = ft_strlen(s);
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+		s[i] == '\v' || s[i] == '\r' || s[i] == '\f')
+	{
+		i++;
+	}
+	j = i;
+	i = len - 1;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+		s[i] == '\v' || s[i] == '\r' || s[i] == '\f')
+	{
+		i--;
+	}
+	return (ft_strsub(s, j, i - j));
 }

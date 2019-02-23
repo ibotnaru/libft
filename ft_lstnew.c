@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:24:19 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 16:14:05 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/22 19:49:01 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/22 21:30:55 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.c"
 
-void	ft_putendl(char const *s)
+t_list	*ft_lstnew(void const *content, size_t content_size);
 {
-	ft_putendl_fd(s, 1);
+	t_list *p;
+
+	p = malloc(sizeof(t_list));
+	p->content = content;
+	p->content_size = content_size;
+	p->next = NULL;
 }
