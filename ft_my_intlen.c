@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_my_intlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 23:24:53 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/26 20:37:18 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/28 17:29:40 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/28 17:33:20 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalpha(int c)
+int		ft_my_intlen(int num)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	int		n;
+
+	n = 1;
+	if (n < 0)
+		n++;
+	while (num /= 10)
+		n++;
+	return (n);
 }

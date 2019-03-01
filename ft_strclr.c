@@ -6,7 +6,7 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 18:04:01 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 18:11:43 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 23:23:51 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_strclr(char *s)
 {
+	if (!s)
+		return ;
 	ft_memset(s, 0, ft_strlen(s));
 }

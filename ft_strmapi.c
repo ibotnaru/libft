@@ -6,11 +6,10 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 19:32:29 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 20:20:44 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 21:30:57 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -28,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		while (s[i])
 		{
-			mem[i] = (*f)(i, s + i);
+			mem[i] = (*f)(i, s[i]);
 			i++;
 		}
 		mem[i] = '\0';

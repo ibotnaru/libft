@@ -6,11 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 17:32:54 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 18:03:27 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:47:23 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {

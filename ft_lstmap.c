@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 23:24:53 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/26 20:37:18 by ibotnaru         ###   ########.fr       */
+/*   Created: 2019/02/24 12:24:37 by ibotnaru          #+#    #+#             */
+/*   Updated: 2019/02/24 12:26:28 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	t_list	*new;
+	t_list	*fresh;
+
+	fresh = f(lst);
+	new = fresh;
+	while (lst->next)
+	{
+		lst = lst->next;
+		if (!(fresh->next = f(lst)))
+		{
+			free(fresh->next);
+			return (NULL);
+		}
+		fresh = fresh->next;
+	}
+	return (new);
 }

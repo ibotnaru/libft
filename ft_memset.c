@@ -6,11 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 17:00:29 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 14:41:37 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 23:00:48 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

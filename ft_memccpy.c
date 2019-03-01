@@ -6,11 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 18:27:05 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:54:26 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:38:31 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

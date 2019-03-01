@@ -6,11 +6,10 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 17:21:59 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 17:27:54 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 23:04:40 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnew(size_t size)
@@ -21,6 +20,6 @@ char	*ft_strnew(size_t size)
 	i = 0;
 	mem = malloc(sizeof(char) * (size + 1));
 	if (mem != NULL)
-		ft_memset(mem, 0, size);
-	return ((void *)mem);
+		ft_memset(mem, 0, size + 1);
+	return (mem);
 }

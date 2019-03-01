@@ -6,11 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 20:01:33 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:11:57 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:38:46 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,7 +6,7 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:49:04 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 21:57:43 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/28 19:07:26 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t			i;
 	size_t			j;
-	unsigned char	*dest;
+	char			*dest;
 
 	i = start;
 	j = 0;
-	dest = ft_strnew(len);
+	if (!s || !(dest = ft_strnew(len)))
+		return (NULL);
 	while (i < len + start)
 	{
 		dest[j] = s[i];

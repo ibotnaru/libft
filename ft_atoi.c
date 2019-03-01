@@ -6,9 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 21:37:08 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 12:07:46 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:35:27 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_atoi(const char *str)
 {

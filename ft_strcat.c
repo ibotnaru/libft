@@ -6,9 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 21:06:50 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/20 21:35:12 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:46:37 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

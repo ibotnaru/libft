@@ -6,9 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 22:54:11 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/20 22:55:47 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:50:01 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_toupper(int c)
 {

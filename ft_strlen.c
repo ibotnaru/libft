@@ -6,11 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 20:21:08 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/20 20:25:49 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:48:25 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

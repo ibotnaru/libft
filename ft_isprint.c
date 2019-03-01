@@ -6,9 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 22:59:08 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/20 23:05:03 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:37:43 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isprint(int c)
 {

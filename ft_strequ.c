@@ -6,7 +6,7 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:25:58 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 21:19:58 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 23:30:13 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (0);
 	return (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 }

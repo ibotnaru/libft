@@ -6,9 +6,11 @@
 /*   By: ibotnaru <ibotnaru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 00:04:27 by ibotnaru          #+#    #+#             */
-/*   Updated: 2019/02/21 00:20:00 by ibotnaru         ###   ########.fr       */
+/*   Updated: 2019/02/26 20:46:56 by ibotnaru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
